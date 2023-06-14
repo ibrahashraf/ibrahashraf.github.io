@@ -1,0 +1,133 @@
+:root {
+    --bg-color: #8c3c4b;
+    --sec-bg-color: #70303c;
+    --grey-color: #9b9b9b;
+    --border-color: #d5d6d6;
+}
+::selection {
+    color: var(--bg-color);
+    background: var(--grey-color);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.main {
+    display: flex;
+    color: var(--grey-color);
+    min-height: 100vh;
+}
+.left {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--bg-color);
+    z-index: -2;
+}
+.left h1 {
+    margin: 0;
+    font-weight: 800;
+}
+.left h2 {
+    padding: 13px 0;
+    color: white;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+}
+.left h2::before {
+    content: "";
+    position: absolute;
+    background-color: var(--sec-bg-color);
+    width: calc(100% + 60px);
+    height: 100%;
+    left: -30px;
+    top: 0;
+    z-index: -1;
+}
+.left p {
+    font-size: 16px;
+    font-weight: 900;
+    margin: 20px 0 10px;
+}
+.left span {
+    font-size: 20px;
+    font-weight: 300;
+}
+.left ul {
+    padding-left: 18.5px;
+}
+.left ul li {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.right {
+    flex: 3;
+    padding: 30px;
+}
+.sum {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6;
+    word-spacing: 1px;
+}
+.right h3 {
+    color: var(--bg-color);
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    padding: 10px 0;
+}
+.career > div {
+    display: flex;
+    gap: 50px;
+}
+.career span {
+    font-size: 24px;
+    font-weight: 200;
+    flex: 1;
+}
+.career > div > div {
+    flex: 5;
+} 
+.right h4 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+.right p {
+    font-size: 20px;
+}
+.career ul {
+    padding-left: 18.5px;
+}
+.career ul li {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 5px;
+}
+.edu {
+    display: flex;
+    gap: 50px;
+}
+.edu span {
+    flex: 1;
+}
+.edu div {
+    flex: 5;
+}
+
+@media (max-width:767px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+
+
